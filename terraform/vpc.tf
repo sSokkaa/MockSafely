@@ -5,12 +5,12 @@ module "vpc" {
   name = "mocksafely-telemetry-vpc"
   cidr = "10.0.0.0/22"
 
-  azs             = ["us-east-1a", "us-east-1b"]
+  azs = ["us-east-1a", "us-east-1b"]
 
   # Hosts EKS
   private_subnets = ["10.0.0.0/24", "10.0.1.0/24"]
   # Hosts NGW and Kubernetes provisioned ALBs
-  public_subnets  = ["10.0.2.0/24", "10.0.3.0/24"]
+  public_subnets = ["10.0.2.0/24", "10.0.3.0/24"]
 
   enable_nat_gateway = true
 
